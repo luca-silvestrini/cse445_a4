@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NationalPark>  <!-- ERROR 1: Root should be NationalParks -->
+
+  <NationalPark Rating="4.9">
+    <Name>Grand Canyon</Name>
+    <Phone>928-638-7496</Phone>
+    <Phone>888-297-2757</Phone>
+    <Phone>866-499-2574</Phone>
+    <Address>  <!-- ERROR 2: NearestAirport required attribute is missing -->
+      <Number>8</Number>
+      <Street>S Entrance Road</Street>
+      <City>Grand Canyon</City>
+      <State>AZ</State>
+      <Zip>86023</Zip>
+    </Address>
+  </NationalPark>
+
+  <NationalPark Rating="4.8">
+    <Name>Yellowstone</Name>
+    <!-- ERROR 3: Phone element is intentionally missing -->
+    <Address NearestAirport="Jackson Hole">
+      <Number>2</Number>
+      <Street>Old Faithful Inn Road</Street>
+      <City>Yellowstone National Park</City>
+      <State>WY</State>
+      <Zip>82190</Zip>
+    </Address>
+  </NationalPark>
+
+  <NationalPark Rating="4.9">
+    <Name>Yosemite</Name>
+    <Name>Yosemite National Park</Name>  <!-- ERROR 5: Two Name elements -->
+    <Phone>209-372-0200</Phone>
+    <Address NearestAirport="Fresno">
+      <Number>9039</Number>
+      <Street>Village Drive</Street>
+      <City>Yosemite Valley</City>
+      <State>CA</State>
+      <Zip>95389</Zip>
+    </Address>
+  </NationalPark>
+
+  <NationalPark>
+    <Name>Great Smoky Mountains</Name>
+    <Phone>865-436-1200</Phone>
+    <Address NearestAirport="Knoxville">  <!-- ERROR 4: No closing tag for Address -->
+      <Number>107</Number>
+      <Street>Park Headquarters Road</Street>
+      <City>Gatlinburg</City>
+      <State>TN</State>
+      <Zip>37738</Zip>
+  </NationalPark>
+</NationalPark>
